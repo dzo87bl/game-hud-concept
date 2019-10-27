@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<!-- META -->
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+		<meta name="keywords" content=""/>
+		<meta name="description" content=""/>
+		<meta name="author" content=""/>
+		<meta name="copyright" content=""/>
+		<meta name="generator" content=""/>
+		<meta name="distribution" content=""/>
+		<meta name="date" content=""/>
+		<!-- SCRIPTS -->
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui-1.12.1.min.js" type="text/javascript"></script>
+		<script src="js/popper.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<!-- TITLE -->
+		<title>{pagetitle}</title>
+		<!-- FAVICON -->
+		<link rel="icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+        <link rel="apple-touch-icon" type="image/png" href="img/favicon.png"><!-- iPhone -->
+        <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="img/favicon.png"><!-- iPad -->
+        <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="img/favicon.png"><!-- iPhone4 -->
+		<!-- PLUGINS -->
+		<link rel="stylesheet" type="text/css" href="plugins/fontawesome-free-5.4.2-web/css/all.min.css"/>
+		<link rel="stylesheet" type="text/css" href="plugins/animate/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="plugins/hover/hover.css"/>
+		<script src="plugins/pace/pace.js" type="text/javascript"></script>
+		<script src="plugins/smooth-mouse-scrolling-scrollspeed/jQuery.scrollSpeed.js" type="text/javascript"></script>
+		<script src="plugins/wheelnav.js-1.7.1/wheelnav.min.js" type="text/javascript"></script>
+		<script src="plugins/wheelnav.js-1.7.1/raphael.min.js" type="text/javascript"></script>
+		<script src="plugins/isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+		<script src="plugins/imagesloaded/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+		<!-- GOOGLE -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- STYLE -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<!-- modules -->
+        <div class="container-fluid" id="modules">
+            <div class="container">
+                <div class="row">
+					<div class="col-12 text-center">
+						<h4 class="title mt-5">HUD Wheel Modules</h4>
+					</div>
+					<div class="col-12">
+						<ul class="nav justify-content-center mt-3 mb-3">
+							<li class="nav-item">
+								<a class="nav-link filter active" href="#" data-filter="*">All</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".gear">Gear</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".weapons">Weapons</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".side-arm">Side arm</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".knife">Knife</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".entrenching-tool">Entrenching tool</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".grenates">Grenates</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".items">Items</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".traps">Traps</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".pouchs">Pouchs</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link filter" href="#" data-filter=".rope">Rope</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col">
+						<div class="grid">
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/alice.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">ALICE</h3>
+											<hr>
+											<p class="text-center">
+												ALICE web gear
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/bag.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Bag</h3>
+											<hr>
+											<p class="text-center">
+												Inventory
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/armor-vest.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Armor vest</h3>
+											<hr>
+											<p class="text-center">
+												Armor
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/helmet.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Helmet</h3>
+											<hr>
+											<p class="text-center">
+												Armor
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/gas-mask-s10.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Gas mask</h3>
+											<hr>
+											<p class="text-center">
+												Gas mask
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/poncho.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Poncho</h3>
+											<hr>
+											<p class="text-center">
+												Poncho
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/shemag.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Shemag</h3>
+											<hr>
+											<p class="text-center">
+												Shemag
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/hk416.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Primary weapon</h3>
+											<hr>
+											<p class="text-center">
+												Primary weapon
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/shutgun.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Secondary weapon</h3>
+											<hr>
+											<p class="text-center">
+												Secondary weapon
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons side-arm">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/sig-p229.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Side arm</h3>
+											<hr>
+											<p class="text-center">
+												Pistol
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/gun-oil.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Gun oil</h3>
+											<hr>
+											<p class="text-center">
+												Gun oil
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons knife">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/knife.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Knife</h3>
+											<hr>
+											<p class="text-center">
+												Knife
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item knife">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/firesteel.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Firesteel</h3>
+											<hr>
+											<p class="text-center">
+												Firesteel
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons knife">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/sharpening-stone.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Sharpening Stone</h3>
+											<hr>
+											<p class="text-center">
+												Sharpening Stone
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item weapons entrenching-tool">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/shovel.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Shovel</h3>
+											<hr>
+											<p class="text-center">
+												Shovel
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item grenates">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/grenate-m67.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Grenate M67</h3>
+											<hr>
+											<p class="text-center">
+												Grenate M67
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item grenates">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/smoke-grenade-m18.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Smoke grenade M18</h3>
+											<hr>
+											<p class="text-center">
+												Smoke grenade M18
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item grenates">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/flashbang-m84.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Flashbang M84</h3>
+											<hr>
+											<p class="text-center">
+												Flashbang M84
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item grenates">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/signal-flare-torch.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Signal flare torch</h3>
+											<hr>
+											<p class="text-center">
+												Signal flare torch
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item grenates">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/molotov-cocktail.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Molotov cocktail</h3>
+											<hr>
+											<p class="text-center">
+												Molotov cocktail
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/bear-trap.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Bear trap</h3>
+											<hr>
+											<p class="text-center">
+												Bear trap
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/bounding-mine.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Bounding mine</h3>
+											<hr>
+											<p class="text-center">
+												Bounding mine
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/trip-mine.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Trip mine</h3>
+											<hr>
+											<p class="text-center">
+												Trip mine
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/antitank-mine.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Antitank mine</h3>
+											<hr>
+											<p class="text-center">
+												Antitank mine
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/explosive-c4.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Explosive C4</h3>
+											<hr>
+											<p class="text-center">
+												Explosive C4
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item pouchs">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/canteen.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Canteen</h3>
+											<hr>
+											<p class="text-center">
+												Water
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item pouchs">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/mess-kit-pouch.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Mess kit</h3>
+											<hr>
+											<p class="text-center">
+												Food
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item pouchs">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/first-aid-kit.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">First aid kit</h3>
+											<hr>
+											<p class="text-center">
+												First aid kit
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item items">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/whistle.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Whistle</h3>
+											<hr>
+											<p class="text-center">
+												Whistle
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item items">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/compass.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Compass</h3>
+											<hr>
+											<p class="text-center">
+												Compass
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item items">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/flashlight.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Flashlight</h3>
+											<hr>
+											<p class="text-center">
+												Flashlight
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item items">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/binocular.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Binocular</h3>
+											<hr>
+											<p class="text-center">
+												Binocular
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item items">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/radio.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Radio</h3>
+											<hr>
+											<p class="text-center">
+												Radio
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item rope">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/paracord.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Rope</h3>
+											<hr>
+											<p class="text-center">
+												Rope
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+			</div>
+        </div>
+		<!-- / modules -->
+		<a href="#" class="scrollup">Scroll</a>
+		<!-- SCRIPTS -->
+		<script language="javascript" src="js/main.js"></script>
+		<script language="javascript" src="js/radial-menu.js"></script>
+		<script language="javascript">
+			$(document).ready(function(){
+				
+			});
+		</script>
+	</body>
+</html>
