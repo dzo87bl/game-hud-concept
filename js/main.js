@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	
 	/* nav dropdown menu */
-	if ($(window).width() > 768) {
+	/*if ($(window).width() > 768) {
 		$('#navbar .nav').removeClass('animated bounceInDown');
 		$('ul.nav li.dropdown').hover(function() {
 			//$(this).find('.dropdown-menu').stop(true, true).fadeIn();
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		});
 	} else {
 		$('#navbar .nav').addClass('animated bounceInDown');
-	}
+	}*/
 	
 	/* remove focus from bootstrap btn */
 	$('.btn').focus(function(event) {

@@ -59,20 +59,21 @@
 							<li class="nav-item">
 								<a class="nav-link filter" href="#" data-filter=".gear">Gear</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link filter" href="#" data-filter=".weapons">Weapons</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link filter" href="#" data-filter=".side-arm">Side arm</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link filter" href="#" data-filter=".knife">Knife</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link filter" href="#" data-filter=".entrenching-tool">Entrenching tool</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link filter" href="#" data-filter=".grenates">Grenates</a>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+									Weapons
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item filter" href="#" data-filter=".primary">Primary</a>
+									<a class="dropdown-item filter" href="#" data-filter=".secondary">Secondary</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item filter" href="#" data-filter=".side-arm">Side arm</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item filter" href="#" data-filter=".knife">Knife</a>
+									<a class="dropdown-item filter" href="#" data-filter=".entrenching-tool">Entrenching tool</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item filter" href="#" data-filter=".grenates">Grenates</a>
+								</div>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link filter" href="#" data-filter=".items">Items</a>
@@ -101,6 +102,8 @@
 											<hr>
 											<p class="text-center">
 												ALICE web gear
+												<br/>
+												Weapons wheel
 											</p>
 										</div>
 									</div>
@@ -117,6 +120,8 @@
 											<hr>
 											<p class="text-center">
 												Inventory
+												<br/>
+												Table 5 &times; 5
 											</p>
 										</div>
 									</div>
@@ -149,6 +154,38 @@
 											<hr>
 											<p class="text-center">
 												Armor
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/binocular-night-vision.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Binocular / Night vision</h3>
+											<hr>
+											<p class="text-center">
+												Binocular / Night vision
+											</p>
+										</div>
+									</div>
+								</div>
+							</div> -->
+							<div class="grid-item gear">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/night-vision-goggles.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Night Vision Goggles</h3>
+											<hr>
+											<p class="text-center">
+												Night Vision
 											</p>
 										</div>
 									</div>
@@ -202,7 +239,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="grid-item weapons">
+							<div class="grid-item primary">
 								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
 									<div class="flipper">
 										<div class="front">
@@ -218,7 +255,39 @@
 									</div>
 								</div>
 							</div>
-							<div class="grid-item weapons">
+							<div class="grid-item primary">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/the-m320-40mm-grenade-launcher.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Grenade launcher</h3>
+											<hr>
+											<p class="text-center">
+												Grenade launcher 40mm
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item primary">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/riflescope-sight.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Scope</h3>
+											<hr>
+											<p class="text-center">
+												Riflescope with sight
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item secondary">
 								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
 									<div class="flipper">
 										<div class="front">
@@ -234,7 +303,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="grid-item weapons side-arm">
+							<div class="grid-item side-arm">
 								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
 									<div class="flipper">
 										<div class="front">
@@ -250,7 +319,23 @@
 									</div>
 								</div>
 							</div>
-							<div class="grid-item weapons">
+							<div class="grid-item side-arm primary">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/silencer.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Silencer</h3>
+											<hr>
+											<p class="text-center">
+												Silencer
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item primary secondary side-arm">
 								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
 									<div class="flipper">
 										<div class="front">
@@ -414,6 +499,22 @@
 								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
 									<div class="flipper">
 										<div class="front">
+											<img src="img/snare.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Snare</h3>
+											<hr>
+											<p class="text-center">
+												Snare
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item traps">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
 											<img src="img/bear-trap.png" class="img-fluid" alt="...">
 										</div>
 										<div class="back">
@@ -533,6 +634,24 @@
 											<hr>
 											<p class="text-center">
 												First aid kit
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item pouchs">
+								<div class="flip-container" onclick="this.classList.toggle('hover');" ontouchstart="this.classList.toggle('hover');">
+									<div class="flipper">
+										<div class="front">
+											<img src="img/buttpack.png" class="img-fluid" alt="...">
+										</div>
+										<div class="back">
+											<h3 class="text-center">Buttpack</h3>
+											<hr>
+											<p class="text-center">
+												Inventory
+												<br/>
+												Table 3 &times; 3
 											</p>
 										</div>
 									</div>
